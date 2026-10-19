@@ -1,0 +1,262 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f8f8;
+    color: #263238;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #073b4c;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    font-size: 26px;
+}
+
+.logo span {
+    color: #ff8066;
+    margin-left: 5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul a:hover {
+    color: #ff8066;
+}
+
+
+.banner {
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+
+    background-image:
+        linear-gradient(
+            rgba(4, 35, 46, 0.75),
+            rgba(4, 35, 46, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-conteudo {
+    max-width: 600px;
+}
+
+.subtitulo {
+    color: #ff8066;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.banner h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    margin-bottom: 25px;
+}
+
+
+.botao {
+    display: inline-block;
+    background-color: #ff8066;
+    color: #073b4c;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #ffab98;
+    transform: translateY(-2px);
+}
+
+/* Seção sobre */
+.sobre {
+    text-align: center;
+    padding: 60px 8%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.sobre h2,
+.destinos h2 {
+    color: #073b4c;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.sobre p {
+    color: #596b70;
+    font-size: 17px;
+}
+
+/* Seção de destinos */
+.destinos {
+    padding: 50px 8% 70px;
+    text-align: center;
+}
+
+.descricao {
+    color: #596b70;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 20px;
+}
+
+.card h3 {
+    color: #073b4c;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #596b70;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.card a {
+    color: #078b8b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #ff8066;
+}
+
+/* Convite final */
+.convite {
+    background-color: #073b4c;
+    color: white;
+    text-align: center;
+    padding: 55px 8%;
+}
+
+.convite h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.convite p {
+    margin-bottom: 25px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #062d3a;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .banner {
+        min-height: 400px;
+        padding: 45px 7%;
+    }
+
+    .banner h1 {
+        font-size: 32px;
+    }
+
+    .sobre h2,
+    .destinos h2,
+    .convite h2 {
+        font-size: 25px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
